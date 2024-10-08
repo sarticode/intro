@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.pages {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #242424;
+    padding: 30px 10px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+    .pages {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .page {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .img, .char, .txt {
+        position: static;
+        transform: none;
+    }
+
+    .img, .char span, .txt {
+        width: 100%;
+    }
+
+    .char span {
+        font-size: 10vw;
+    }
+}
+
+.page {
+    width: calc(100% / 3);
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    background-color: #efeded;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.page:hover {
+    transform: scale(1.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #979797;
+}
+
+.page-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.img {
+    position: absolute;
+    width: 200px;
+    overflow: hidden;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.char {
+    position: absolute;
+    width: 200px;
+    overflow: hidden;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: slideIn 1s ease-in-out;
+}
+
+.char span {
+    font-weight: bold;
+    font-size: 200px;
+}
+
+.txt {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    padding: 0 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.footer div span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#this {
+    background-color: #242424;
+}
+
+
